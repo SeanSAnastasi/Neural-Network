@@ -1,6 +1,7 @@
 import xlrd
 from numpy import *
 import random
+import time
 
 input_matrix, result_matrix = (None for i in range(2))
 
@@ -113,6 +114,7 @@ class NeuralNetwork:
         return
 
 def main():
+    start_time = time.time()
     start()
     nueral_net = NeuralNetwork(5,4,3)
     sample = sampleData(26)
@@ -133,7 +135,7 @@ def main():
     
 
     
-
+    print("--- %s seconds ---" % (time.time() - start_time))
 
 main()
 
